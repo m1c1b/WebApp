@@ -1,6 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.156
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp", "WebApp\WebApp.csproj", "{CC4935F5-1AB9-46DB-B6D1-8D789DD1831D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormForCreatingValues", "FormForCreatingValues\FormForCreatingValues.csproj", "{4432F60B-6FE4-4716-B68C-EACC3912F5FD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +17,15 @@ Global
 		{CC4935F5-1AB9-46DB-B6D1-8D789DD1831D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC4935F5-1AB9-46DB-B6D1-8D789DD1831D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC4935F5-1AB9-46DB-B6D1-8D789DD1831D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4432F60B-6FE4-4716-B68C-EACC3912F5FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4432F60B-6FE4-4716-B68C-EACC3912F5FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4432F60B-6FE4-4716-B68C-EACC3912F5FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4432F60B-6FE4-4716-B68C-EACC3912F5FD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C063F2C0-07E2-4BFC-B3B3-6A37F3B3769C}
 	EndGlobalSection
 EndGlobal
