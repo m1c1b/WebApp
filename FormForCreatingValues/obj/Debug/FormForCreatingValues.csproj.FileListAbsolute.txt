@@ -1,0 +1,13 @@
+C:\Users\viazn\RiderProjects\WebApp\FormForCreatingValues\bin\Debug\FormForCreatingValues.exe.config
+C:\Users\viazn\RiderProjects\WebApp\FormForCreatingValues\bin\Debug\FormForCreatingValues.exe
+C:\Users\viazn\RiderProjects\WebApp\FormForCreatingValues\bin\Debug\FormForCreatingValues.pdb
+C:\Users\viazn\RiderProjects\WebApp\FormForCreatingValues\obj\Debug\FormForCreatingValues.csprojAssemblyReference.cache
+C:\Users\viazn\RiderProjects\WebApp\FormForCreatingValues\obj\Debug\FormForCreatingValues.Form1.resources
+C:\Users\viazn\RiderProjects\WebApp\FormForCreatingValues\obj\Debug\FormForCreatingValues.Properties.Resources.resources
+C:\Users\viazn\RiderProjects\WebApp\FormForCreatingValues\obj\Debug\FormForCreatingValues.csproj.GenerateResource.cache
+C:\Users\viazn\RiderProjects\WebApp\FormForCreatingValues\obj\Debug\FormForCreatingValues.csproj.CoreCompileInputs.cache
+C:\Users\viazn\RiderProjects\WebApp\FormForCreatingValues\obj\Debug\FormForCreatingValues.exe
+C:\Users\viazn\RiderProjects\WebApp\FormForCreatingValues\obj\Debug\FormForCreatingValues.pdb
+C:\Users\viazn\RiderProjects\WebApp\FormForCreatingValues\bin\Debug\en-US\FormForCreatingValues.resources.dll
+C:\Users\viazn\RiderProjects\WebApp\FormForCreatingValues\obj\Debug\FormForCreatingValues.Form1.en-US.resources
+C:\Users\viazn\RiderProjects\WebApp\FormForCreatingValues\obj\Debug\en-US\FormForCreatingValues.resources.dll
