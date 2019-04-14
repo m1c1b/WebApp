@@ -1,26 +1,19 @@
-﻿using System.Web.Mvc;
-
+﻿using System.Collections.Generic;
+using System.Web.Mvc;
+using WebApp.Models;
 namespace WebApp.Controllers
 {
     public class HomeController : Controller
     {
+        public LabValuesContext db = new LabValuesContext(); // Создание контекста данных
         public ActionResult Index()
         {
-            return View();
-        }
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            FillDb fillDb = new FillDb();
+            fillDb.Fill();                            // Запись новых значений в БД
+            
+            IEnumerable<Value> labValues = db.Values; // Получаем из бд все объекты Value
+            ViewBag.Values = labValues;            // Передаем все объекты в динамическое свойство Labvalues в ViewBag
+            return View();                            // Возвращаем представление
         }
     }
 }
