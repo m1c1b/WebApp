@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Web.Mvc;
 using WebApp.Models;
 namespace WebApp.Controllers
@@ -8,8 +9,10 @@ namespace WebApp.Controllers
         public LabValuesContext db = new LabValuesContext(); // Создание контекста данных
         public ActionResult Index()
         {
-            FillDb fillDb = new FillDb();
-            fillDb.Fill();                            // Запись новых значений в БД
+            
+            string path = $@"C:\Users\viazn\RiderProjects\WebApp\FormForCreatingValues\Values from the lab\{DateTime.Now.Year}\{DateTime.Now.Month}";
+            if(!FillDb.WritingCheck(path))
+                FillDb.Fill(path);
             
             IEnumerable<Value> labValues = db.Values; // Получаем из бд все объекты Value
             ViewBag.Values = labValues;            // Передаем все объекты в динамическое свойство Labvalues в ViewBag

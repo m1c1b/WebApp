@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormForCreatingValues", "Fo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{CED84950-F692-4D11-A9B2-65E858F621D8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test Of FileWatcher", "Test Of FileWatcher\Test Of FileWatcher.csproj", "{15793AE8-3927-4A4A-94B6-18998C27DD09}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{CED84950-F692-4D11-A9B2-65E858F621D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CED84950-F692-4D11-A9B2-65E858F621D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CED84950-F692-4D11-A9B2-65E858F621D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15793AE8-3927-4A4A-94B6-18998C27DD09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15793AE8-3927-4A4A-94B6-18998C27DD09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15793AE8-3927-4A4A-94B6-18998C27DD09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15793AE8-3927-4A4A-94B6-18998C27DD09}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -31,7 +31,7 @@ namespace FormForCreatingValues
                 using (FileStream fstream = new FileStream($@"C:\Users\viazn\RiderProjects\WebApp\FormForCreatingValues\Values from the lab\{DateTime.Now.Year}\{DateTime.Now.Month}\{DateTime.Now.Day}.txt",
                     FileMode.OpenOrCreate))
                 {
-                    for (int i = 0; i < 3; i++)
+                    for (int i = 0; i < values.Length; i++)
                     {
                         // преобразуем строку в байты
                         byte[] array = Encoding.Default.GetBytes(values[i] + " " + $@"{DateTime.Now}" + "\n");
