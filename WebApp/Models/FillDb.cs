@@ -1,24 +1,29 @@
 // Класс для заполнения базы данных значений из лаборатории
 using System;
 using System.IO;
+using System.Collections;
+using System.Collections.Generic;
+using System.Data.Entity;
+using System.Data.Entity.Core.Common.CommandTrees;
+using System.Linq;
 
 namespace WebApp.Models
 {
     public class FillDb
     {
-        public static void Fill(string path)
+        public static void FillLabVals(string path)
         {
-            DirectoryInfo dirInfo = new DirectoryInfo(path);               // Переменная класса для работы с файлами
-            string[] lines = new string[3];                                // Массив для записи строк из файла
+            DirectoryInfo dirInfo = new DirectoryInfo(path);                                      // Переменная класса для работы с файлами
+            string[] lines = new string[3];                                                       // Массив для записи строк из файла
             byte[] readArray;
             
             if (dirInfo.Exists)
             {
                 using (FileStream read = File.OpenRead(path + $@"\{DateTime.Now.Day}.txt"))
                 {
-                    readArray = new byte[read.Length];                          // Преобразуем строку в байты
-                    read.Read(readArray, 0, readArray.Length);     // Считываем данные
-                    string textFromFile = System.Text.Encoding.Default.GetString(readArray);    // Декодируем байты в строку
+                    readArray = new byte[read.Length];                                             // Преобразуем строку в байты
+                    read.Read(readArray, 0, readArray.Length);                        // Считываем данные
+                    string textFromFile = System.Text.Encoding.Default.GetString(readArray);      // Декодируем байты в строку
 
                     #region File strings of laboratory numbers into array of strings
                     for (int i = 0; i < 3; i++)
@@ -27,11 +32,10 @@ namespace WebApp.Models
                         lines[i] = textFromFile.Substring(0, indexofnewline);
                         textFromFile = textFromFile.Remove(0, indexofnewline+1);
                     }
-                    
                     #endregion
                     
                     #region Write this array of strings into Data Base 
-                    using (LabValuesContext db = new LabValuesContext()) //    Создание контекста данных 
+                    using (LabValuesContext dbL= new LabValuesContext()) //    Создание контекста данных 
                     {
                         int indexofnewnum;
                         string[] texttodb = new string[2];
@@ -49,9 +53,9 @@ namespace WebApp.Models
                                 texttodb[0] = texttodb[0].Replace(".", ",");
                             }
                             
-                            Value value = new Value{Val = Convert.ToDouble(texttodb[0]), Date = texttodb[1]};
-                            db.Values.Add(value);
-                            db.SaveChanges();
+                            Value value = new Value{Val = Convert.ToDouble(texttodb[0]), Time = texttodb[1]};
+                            dbL.Values.Add(value);
+                            dbL.SaveChanges();
                         }   
                     }
                     #endregion
@@ -68,7 +72,6 @@ namespace WebApp.Models
                     writing.Write(readArray, 0, readArray.Length);
                 }
                 #endregion
-                
             }
         }
 
@@ -79,8 +82,18 @@ namespace WebApp.Models
                 byte[] readArray = new byte[read.Length]; // Преобразуем строку в байты
                 read.Read(readArray, 0, readArray.Length);
                 
-                return readArray[0] == 10;
+                return readArray[0] != 10;
             }
+        }
+
+        public static void FillSensorVals()
+        {
+            LabValuesContext dbL = new LabValuesContext(); // Создание контекста данных базы со значениями из лаборатории 
+            SensorValuesContext dbS = new SensorValuesContext(); // Создание контекста данных базы со значениями датчика 
+            
+            dbL.Values.Load();
+            
+            
         }
     }
 }

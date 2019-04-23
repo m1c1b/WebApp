@@ -1,4 +1,4 @@
-﻿@{
+@{
     Layout = null;
 }
  
@@ -10,22 +10,9 @@
     <title>Лаборатория</title>
 </head>
 <body>
-<div>
-    <h3>Значения</h3>
-    <table>
-        <tr><td><p>Id значения</p></td>
-            <td><p>Октановое число</p></td>
-            <td><p>Дата измерения</p></td><td></td>
-        </tr>
-        @foreach (var v in ViewBag.Values)
-        {
-            <tr>
-                <td><p>@v.Id</p></td>
-                <td><p>@v.Val</p></td>
-                <td><p>@v.Date</p></td>
-            </tr>
-        }
-    </table>
-</div>
+<canvas id="myChart"></canvas>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
+<script src="../../Scripts/FrontChart.js"></script>
 </body>
 </html>
