@@ -98,8 +98,7 @@ namespace WebApp.Models
             }
             
             Value sensVal = new Value{Val = Math.Round(summ/3,2), Time =Convert.ToString(DateTime.Now)};
-            Console.WriteLine($"Добавлено в БД датчика: {sensVal.Val} - {sensVal.Time}");
-            
+            //Console.WriteLine($"Добавлено в БД датчика: {sensVal.Val} - {sensVal.Time}");
             dbS.Values.Add(sensVal);
             dbS.SaveChanges();
         }

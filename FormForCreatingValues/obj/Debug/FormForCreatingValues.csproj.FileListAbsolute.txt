@@ -11,3 +11,10 @@ C:\Users\viazn\RiderProjects\WebApp\FormForCreatingValues\obj\Debug\FormForCreat
 C:\Users\viazn\RiderProjects\WebApp\FormForCreatingValues\bin\Debug\en-US\FormForCreatingValues.resources.dll
 C:\Users\viazn\RiderProjects\WebApp\FormForCreatingValues\obj\Debug\FormForCreatingValues.Form1.en-US.resources
 C:\Users\viazn\RiderProjects\WebApp\FormForCreatingValues\obj\Debug\en-US\FormForCreatingValues.resources.dll
+C:\Users\viazn\RiderProjects\WebApp\FormForCreatingValues\bin\Debug\FireSharp.dll
+C:\Users\viazn\RiderProjects\WebApp\FormForCreatingValues\bin\Debug\FireSharp.Serialization.JsonNet.dll
+C:\Users\viazn\RiderProjects\WebApp\FormForCreatingValues\bin\Debug\Newtonsoft.Json.dll
+C:\Users\viazn\RiderProjects\WebApp\FormForCreatingValues\bin\Debug\RestSharp.dll
+C:\Users\viazn\RiderProjects\WebApp\FormForCreatingValues\bin\Debug\Newtonsoft.Json.xml
+C:\Users\viazn\RiderProjects\WebApp\FormForCreatingValues\bin\Debug\RestSharp.xml
+C:\Users\viazn\RiderProjects\WebApp\FormForCreatingValues\obj\Debug\FormForCreatingValues.csproj.CopyComplete

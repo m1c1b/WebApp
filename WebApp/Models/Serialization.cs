@@ -5,7 +5,7 @@ using Newtonsoft.Json;
 namespace WebApp.Models
 {
     [DataContract]
-    public class Dot // Класс для с
+    public class Dot 
     {
         [DataMember]
          int Id { get; set; }
@@ -31,6 +31,7 @@ namespace WebApp.Models
             {
                 var value = dbS.Values.Find(id); // Нахождение строчки в БД по значению
                 Dot dot = new Dot(value.Id, value.Val, value.Time); // Создаёт объект с параметрами из БД
+                
                 dots[i] = dot;
                 i++;
             }

@@ -17,6 +17,8 @@ namespace WebApp.Controllers
                     FillDb.FillLabVals(path);
                 FillDb.FillSensorVals();
             }
+
+            
             
             IEnumerable<Value> labValues = dbL.Values;        // Получаем из бд все объекты Value
             ViewBag.Values = labValues;                      // Передаем все объекты в динамическое свойство Labvalues в ViewBag
