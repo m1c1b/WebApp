@@ -1,12 +1,11 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 
 namespace WebApp.Models
 {
-    [DataContract]
+   // [DataContract]
     public class Dot 
     {
         [DataMember]
@@ -18,7 +17,7 @@ namespace WebApp.Models
         [DataMember]
         public DateTime Time { get; set; } // Дата создания значения
 
-        private Dot(int id, double labVal, double sensVal, DateTime time)
+        public Dot(int id, double labVal, double sensVal, DateTime time)
         {
             Id = id;
             LabVal = labVal;

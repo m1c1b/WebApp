@@ -44,9 +44,15 @@ class DataProvider {
         // this.baseUrl = `http://${window.location.hostname}:5000`;
     };
 
-    fetchData = async (start, end) => {
+    fetchData1 = async (start, end) => {
         const data = await fetch(`${this.baseUrl}/home/set?start=${start}&end=${end}`);
         return data.json();
+    };
+    
+    fetchData2 = async (start, end) => {
+        //const data = await fetch(`${this.baseUrl}/home/getFile?start=${start}&end=${end}`);
+        var url = `${this.baseUrl}/home/getFile?start=${start}&end=${end}`;
+        open(url);
     };
 }
 
@@ -77,20 +83,48 @@ const dataProvider = new DataProvider();
 const getData = () => {
   const getDate = (input) => {
     let date = input.value.split(' ')[0].split('.');
-    let time = input.value.split(' ')[1] + ':00';
+    let time = input.value.split(' ')[1].split(':');
+    if (Number(time[0]) < 10){
+      time[0] = '0'+time[0];
+    };
     let newDate = '';
     for (let i = date.length-1; i >= 1; i--){
       newDate += date[i] + '-';
     };
     newDate += date[0];
-    return newDate+'T'+time;
+    time = time.reduce((s, el) => s + ':' + el);
+    console.log(newDate+'T'+time+':00');
+    return newDate+'T'+time+':00';
   };
 
   const start = getDate(document.getElementById('startDateInput'));
   const end = getDate(document.getElementById('endDateInput'));
   // console.log(start, end);
-  dataProvider.fetchData(start, end)
+  dataProvider.fetchData1(start, end)
     .then((data) => {
         setChartData(chart, data)
     });
+};
+
+const getFile = () => {
+    const getDate = (input) => {
+        let date = input.value.split(' ')[0].split('.');
+        let time = input.value.split(' ')[1].split(':');
+        if (Number(time[0]) < 10){
+            time[0] = '0'+time[0];
+        };
+        let newDate = '';
+        for (let i = date.length-1; i >= 1; i--){
+            newDate += date[i] + '-';
+        };
+        newDate += date[0];
+        time = time.reduce((s, el) => s + ':' + el);
+        console.log(newDate+'T'+time+':00');
+        return newDate+'T'+time+':00';
+    };
+
+    const start = getDate(document.getElementById('startDateInput'));
+    const end = getDate(document.getElementById('endDateInput'));
+    // console.log(start, end);
+    dataProvider.fetchData2(start, end);
 };

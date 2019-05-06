@@ -130,9 +130,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\DownloadFile.cs" />
     <Compile Include="Models\FillDb.cs" />
     <Compile Include="Models\ValuesContext.cs" />
-    <Compile Include="Models\Serialization.cs" />
+    <Compile Include="Models\Dot.cs" />
     <Compile Include="Models\Value.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

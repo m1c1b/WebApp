@@ -26,5 +26,13 @@ namespace WebApp.Controllers
         {
             return Dot.Creator(start, end);    // Возвращает строку от нужного отрезка времени
         }
+        public FileResult GetFile(string start, string end)
+        {
+            string filepath = Server.MapPath("~/Files/YourData.txt"); // Путь к файлу
+            string file_type="application/txt";  // Тип файла - content-type
+            string file_name = "YourData.txt"; // Имя файла - необязательно
+            DownloadFile.Create(start, end, filepath);
+            return File(filepath,file_type,file_name);
+        }
     }
 }
