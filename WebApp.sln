@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test Of FileWatcher", "Test
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Firebase", "Firebase\Firebase.csproj", "{629CE937-86BF-4F1C-878F-E4EB76BF1B97}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test Fill", "Test Fill\Test Fill.csproj", "{0D1953FB-5338-46C2-AF4B-7855C85A49EA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{629CE937-86BF-4F1C-878F-E4EB76BF1B97}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{629CE937-86BF-4F1C-878F-E4EB76BF1B97}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{629CE937-86BF-4F1C-878F-E4EB76BF1B97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D1953FB-5338-46C2-AF4B-7855C85A49EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D1953FB-5338-46C2-AF4B-7855C85A49EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D1953FB-5338-46C2-AF4B-7855C85A49EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D1953FB-5338-46C2-AF4B-7855C85A49EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

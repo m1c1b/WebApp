@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Text;
+using System.Threading;
 using System.Windows.Forms;
 using FireSharp;
 using FireSharp.Config;
@@ -51,9 +52,9 @@ namespace FormForCreatingValues
                     FirebaseValue labvaluetofirebase = new FirebaseValue(i, Convert.ToDouble(valuesfromform[i - displacement - 1]), DateTime.Now);
                     
                     client.Set("Laboratory values/" + labvaluetofirebase.Id, labvaluetofirebase);
+                    Thread.Sleep(100);
                     response = client.Get("Last/Sensor values/Value");
-                    valuestotext[i - displacement - 1] = new Value(i,labvaluetofirebase.Value,Convert.ToDouble(response.Body.Replace('.',',')), DateTime.Now);
-                    
+                    valuestotext[i - displacement - 1] = new Value(i,labvaluetofirebase.Value,Convert.ToDouble(response.Body.Replace('.',',')), labvaluetofirebase.Time);
                     if (i == 3 + displacement)
                     {
                         client.Set("Last/Laboratory values", labvaluetofirebase);
@@ -66,7 +67,7 @@ namespace FormForCreatingValues
                     {
                         // преобразуем строку в байты
                         byte[] array = Encoding.Default.GetBytes
-                            ($@"{valuestotext[i].Id} L: {valuestotext[i].LabVal} S: {valuestotext[i].SensVal} T: {valuestotext[i].Time} L-S: {valuestotext[i].LabVal-valuestotext[i].SensVal}" + "\n");
+                            ($@"L_{valuestotext[i].LabVal} S_{valuestotext[i].SensVal} T_{valuestotext[i].Time}.{valuestotext[i].Time.Millisecond} L-S:{valuestotext[i].LabVal-valuestotext[i].SensVal}" + "\n");
                         // запись массива байтов в файл
                         fstream.Write(array, 0, array.Length);
                     }
