@@ -53,8 +53,10 @@ namespace FormForCreatingValues
                     
                     client.Set("Laboratory values/" + labvaluetofirebase.Id, labvaluetofirebase);
                     Thread.Sleep(100);
+                    
                     response = client.Get("Last/Sensor values/Value");
                     valuestotext[i - displacement - 1] = new Value(i,labvaluetofirebase.Value,Convert.ToDouble(response.Body.Replace('.',',')), labvaluetofirebase.Time);
+                    
                     if (i == 3 + displacement)
                     {
                         client.Set("Last/Laboratory values", labvaluetofirebase);

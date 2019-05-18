@@ -16,15 +16,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
 </head>
 <body>
-<canvas id="myChart">
-  <script src="/Scripts/MyChart.js"></script>
-</canvas>
-  <!-- <script src="../../Scripts/Chart.js"></script> -->
+<div style="width: 1200px; height: 600px" >
+    <canvas id="myChart">
+        <script src="/Scripts/MyChart.js"></script>
+    </canvas>
+</div>
+<!-- <script src="../../Scripts/Chart.js"></script> -->
 <div class="datepicker-container">
     <div class='col-md-5'>
         <div class="form-group">
             <div class='input-group date' id='startDate'>
-                <input type='text' class="form-control" id='startDateInput' />
+                <input type='text' class="form-control" id='startDateInput'/>
                 <span class="input-group-addon">
                     <span class="glyphicon glyphicon-calendar"></span>
                 </span>
@@ -42,17 +44,17 @@
         </div>
     </div>
 </div>
-    <button type="button"
-            class="btn btn-primary"
-            onclick="getData()">
-        Get data
-    </button>
-    <button type="button"
-            class="btn btn-primary"
-            onclick="getFile()">
-        Download
-    </button>
-  <script type="text/javascript">
+<button type="button"
+        class="btn btn-primary"
+        onclick="getData()">
+    Get data
+</button>
+<button type="button"
+        class="btn btn-primary"
+        onclick="getFile()">
+    Download
+</button>
+<script type="text/javascript">
       $(function () {
           $('#startDate').datetimepicker({locale: 'ru'});
           $('#endDate').datetimepicker({
@@ -66,6 +68,6 @@
               $('#startDate').data("DateTimePicker").maxDate(e.date);
           });
       });
-  </script>  
+  </script>
 </body>
 </html>

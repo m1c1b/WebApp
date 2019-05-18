@@ -30,7 +30,7 @@ var chart = new Chart(ctx, {
                 },
                 scaleLabel: {
                     display: true,
-                    labelString: 'Time',
+                    labelString: 'Values',
                     fontSize: 20
                 }
             }],
