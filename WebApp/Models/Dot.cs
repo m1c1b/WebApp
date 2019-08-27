@@ -5,7 +5,6 @@ using Newtonsoft.Json;
 
 namespace WebApp.Models
 {
-   // [DataContract]
     public class Dot 
     {
         [DataMember]
